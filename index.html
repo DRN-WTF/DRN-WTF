@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DRN</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    </head>
+    <body style="overflow:hidden">
+        <div id="loading-screen" class="loading-screen">
+            <button id="start-button">Enter</button>
+        </div>        
+        <audio id="background-music" src="./fuckyou.mp3"></audio>
+        <script src="./popup.js"></script>
+        <script>
+            document.getElementById('start-button').addEventListener('click', function() {
+              var music = document.getElementById('background-music');
+              music.play();
+        
+              var loadingScreen = document.getElementById('loading-screen');
+              loadingScreen.classList.add('fade-out');
+        
+              setTimeout(function() {
+                loadingScreen.style.display = 'none';
+              }, 1000);
+              showErrorMessage(0);
+            });
+          </script>
+        
+        <canvas class="matrix"></canvas>
+        <div>
+            <center>
+                <pre class="ascii" id="ascii"></pre>
+            </center>
+        </div>
+        <p>&nbsp;</p>
+        <div>
+            <center>
+                <a href="./sub/members.html" class="title">Members</a>
+                <p>&nbsp;</p>
+                <a href="./sub/downloads.html" class="title">Downloads</a>
+            </center>
+        </div>
+        <p>&nbsp;</p>
+        <a href="https://discord.gg/N6S94xenTs" target="_blank" id="discord-server">
+            <img src="imgs/discord.png" alt="discord" id="discord" style="width: 100px; height: 50;margin:0 auto; display: block;">
+        </a>
+        
+
+        <script src="./ascii.js"></script>
+        <script src="./matrix.js"></script>
+        <script src="./animtitle.js"></script>
+        <script src="./sparkles.js"></script>
+        <script>
+            function fuckyou(){
+                if(!navigator.userAgent.toLowerCase().includes('firefox')){
+                    document.getElementById("loading-screen").innerHTML = "<h1 class=\"title\">Use FireFox you retard</h1>" + document.getElementById("loading-screen").innerHTML;
+                }
+            }
+            fuckyou();
+            
+        </script>
+    </body>
+</html>
