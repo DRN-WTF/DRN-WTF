@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Valdz</title>
+        <link rel="stylesheet" href="../../style.css">
+        <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    </head>
+    <body style="overflow:hidden">
+        <div id="loading-screen" class="loading-screen">
+            <button id="start-button">Enter</button>
+        </div>        
+        <audio id="background-music" src="audio/valdz.mp3"></audio>
+        <a href="../members.html" class="back"><-Back</a>
+        <script src="../../popup.js"></script>
+        <script>
+            document.getElementById('start-button').addEventListener('click', function() {
+              var music = document.getElementById('background-music');
+              music.play();
+        
+              var loadingScreen = document.getElementById('loading-screen');
+              loadingScreen.classList.add('fade-out');
+        
+              setTimeout(function() {
+                loadingScreen.style.display = 'none';
+              }, 1000);
+              showErrorMessage(0);
+            });
+          </script>
+        <canvas class="dots" id="dots"></canvas>
+        <div>
+            <center>
+                <p>&nbsp;</p>
+                <pre class="ascii" id="ascii">
+
+ ____   _________  .____     ________  __________
+ \   \ /   /  _  \ |    |    \______ \ \____    /
+  \   Y   /  /_\  \|    |     |    |  \  /     / 
+   \     /    |    \    |___  |    `   \/     /_ 
+    \___/\____|__  /_______ \/_______  /_______ \
+                 \/        \/        \/        \/
+</pre>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <pre class="ascii" id="txt">
+Registered Sex Offender
+
+Professional Manipulator
+
+ඞ
+                </pre>
+                <button onclick="setInterval(OwO, 0.001);" style="border-radius: 5px; background-color: red; color: black; border-style: solid; border-color: black;">Dont click me :3</button>
+            </center>
+        </div>
+        <script src="../../dots2.js"></script>
+        <script src="../../sparkles_rb.js"></script>
+        <script src="../../popup.js"></script>
+        <script>
+            function OwO(){
+                alert("niger");
+                //showErrorMessage(0);
+            }
+        </script>
+    </body>
+</html>
